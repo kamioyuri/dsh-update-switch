@@ -1,0 +1,19 @@
+{
+  "name": "dsh-update-switch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 桌面端版本更新下载开关：允许更新 / 禁止更新。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "package.json"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "inject": [] }
+  }
+}
